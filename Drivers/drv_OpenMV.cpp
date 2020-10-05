@@ -19,14 +19,14 @@ static void _OpenMV_Server(void *pvParameters)
     unsigned char y_counter = 0;
     unsigned char x_enter = 0;
     unsigned char y_enter = 0;
-    unsigned char buf_x[10] = "-122.522";
-    unsigned char buf_y[10] = "111.251";
-    unsigned char buffer[14] = "AAX12.2Y-23.5";
+    unsigned char buf_x[10];// = "-122.522";
+    unsigned char buf_y[10];// = "111.251";
+    unsigned char buffer[20] = "AAX122.24Y-232.54EE";
     unsigned char nagtiveFlag = 0;
     unsigned char digCount = 0;
     unsigned char decimal = 0;
     double a = 1;
-    unsigned char j = 0;
+    int j = 0;
     double num = 0;
 
     openMVMutex = xSemaphoreCreateMutex();
@@ -34,38 +34,38 @@ static void _OpenMV_Server(void *pvParameters)
 
     while (1)
     {
-        // uint8_t rdata;
-        // // if (Read_Uart3(&rdata, 1, 2, 0.5))
-        // // {
-        // rdata = buffer[j];
-        // ++j;j%=13;
-        //     if (rc_counter < 2)
-        //     {
-        //         //接收包头
-        //         if (rdata != packet_ID[rc_counter])
-        //             rc_counter = 0;
-        //         else
-        //         {
-        //             ++rc_counter;
-        //         }
-        //     }
-        //     else if (rc_counter > 1 && rc_counter < 4)
-        //     {
-        //         //接收包尾
-        //         if (rdata != packet_ID[rc_counter])
-        //             rc_counter = 2;
-        //         else
-        //         {
-        //             ++rc_counter;
-        //         }
-        //     }
-            // else if (rc_counter == 4)
-            // {
-            //     //读取完整包结束进行数据处理
-            //     rc_counter = 0;
-            //     x_enter = 0;
-            //     y_enter = 0;
-            x_counter = 8;
+        uint8_t rdata;
+        // if (Read_Uart3(&rdata, 1, 2, 0.5))
+        // {
+        rdata = buffer[j];
+        j = j + 1;
+        j = j % 19;
+            if (rc_counter < 2)
+            {
+                //接收包头
+                if (rdata != packet_ID[rc_counter])
+                    rc_counter = 0;
+                else
+                {
+                    ++rc_counter;
+                }
+            }
+            if (rc_counter > 1 && rc_counter < 4)
+            {
+                //接收包尾
+                if (rdata != packet_ID[rc_counter])
+                    rc_counter = 2;
+                else
+                {
+                    ++rc_counter;
+                }
+            }
+            if (rc_counter == 4)
+            {
+                //读取完整包结束进行数据处理
+                rc_counter = 0;
+                x_enter = 0;
+                y_enter = 0;
                 if (x_counter != 0)
                 {
                     for (unsigned char i = 0; i < x_counter; i++)
@@ -115,7 +115,7 @@ static void _OpenMV_Server(void *pvParameters)
                         nagtiveFlag = 0;
                 
                 }
-                y_counter = 7;
+
                 if (y_counter != 0)
                 {
                     for (unsigned char i = 0; i < y_counter; i++)
@@ -163,27 +163,30 @@ static void _OpenMV_Server(void *pvParameters)
                         decimal = 0;
                         nagtiveFlag = 0;
                 }
-            // }
-            // if (rdata == 'X' && rc_counter == 2)
-            // { //判断进入X值的读取
-            //     x_enter = 1;
-            //     y_enter = 0;
-            // }
-            // else if (rdata == 'Y' && rc_counter == 2)
-            // { //判断进入Y值的读取
-            //     x_enter = 0;
-            //     y_enter = 1;
-            // }
-            // if (x_enter)
-            // { //读取X的值
-            //     buf_x[x_counter] = rdata;
-            //     ++x_counter;
-            // }
-            // else if (y_enter)
-            // { //读取Y的值
-            //     buf_y[y_counter] = rdata;
-            //     ++y_counter;
-            // }
+            }
+            if (x_enter)
+            { //读取X的值
+                buf_x[x_counter] = rdata;
+                ++x_counter;
+            }
+            if (y_enter)
+            { //读取Y的值
+                buf_y[y_counter] = rdata;
+                ++y_counter;
+            }
+            if (rdata == 'X' && rc_counter == 2)
+            { //判断进入X值的读取
+                x_enter = 1;
+                y_enter = 0;
+                x_counter = 0;
+            }
+            if (rdata == 'Y' && rc_counter == 2)
+            { //判断进入Y值的读取
+                x_enter = 0;
+                y_enter = 1;
+                y_counter = 0;
+            }
+            
         }
       
     }
