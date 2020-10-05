@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ACFly.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ACFly.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Tue Oct  6 03:36:04 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Tue Oct  6 04:02:04 2020
 <BR><P>
 <H3>Maximum Stack Usage =       4152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2464,6 +2464,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xStreamBufferReceive
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL14_OpenMV_ServerPv
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> drv_uart3.o(.text._Z14init_drv_Uart3v)
 </UL>
@@ -7471,9 +7473,9 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 5]<UL><LI> gui.o(.text.DMA2D_IRQHandler)
 <LI> drv_flash.o(.text.QUADSPI_IRQHandler)
+<LI> drv_oled.o(.text.SPI4_IRQHandler)
 <LI> drv_extiic.o(.text.I2C1_EV_IRQHandler)
 <LI> drv_extiic.o(.text.I2C1_ER_IRQHandler)
-<LI> drv_oled.o(.text.SPI4_IRQHandler)
 </UL>
 <P><STRONG><a name="[3e2]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(.text.vListInitialise))
 <BR><BR>[Called By]<UL><LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
@@ -8059,6 +8061,7 @@ Global Symbols
 <LI><a href="#[3e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvSampleTimeNow
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGiveMutexRecursive
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutexStatic
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL14_OpenMV_ServerPv
 <LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexRelease
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessagePut
@@ -8081,7 +8084,6 @@ Global Symbols
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiverUpdate(SName, bool, float*, unsigned char, double)
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart1(unsigned char*, unsigned short, double, double)
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart5(unsigned char*, unsigned short, double, double)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart7(unsigned char*, unsigned short, double, double)
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ResetRx_Uart8(double)
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart8(unsigned char*, unsigned short, double, double)
@@ -8248,6 +8250,7 @@ Global Symbols
 <LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveMissions(double)
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;addMission(MissionInf, bool, double)
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueTakeMutexRecursive
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL14_OpenMV_ServerPv
 <LI><a href="#[39e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexWait
 <LI><a href="#[300]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PositionSensorUpdatePositionGlobalVel(unsigned char, vector3&lang;double&rang;, vector3&lang;double&rang;, bool, double, double, double, double)
@@ -8269,7 +8272,6 @@ Global Symbols
 <LI><a href="#[1db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiverUpdate(SName, bool, float*, unsigned char, double)
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart1(unsigned char*, unsigned short, double, double)
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart5(unsigned char*, unsigned short, double, double)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart7(unsigned char*, unsigned short, double, double)
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ResetRx_Uart8(double)
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart8(unsigned char*, unsigned short, double, double)
@@ -8367,6 +8369,7 @@ Global Symbols
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL8SDS_TaskPv
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Write_Uart1(const unsigned char*, unsigned short, double, double)
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart1(unsigned char*, unsigned short, double, double)
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL5TxTCBPvj
@@ -8375,7 +8378,6 @@ Global Symbols
 <LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart5(unsigned char*, unsigned short, double, double)
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL5TxTCBPvj
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Write_Uart3(const unsigned char*, unsigned short, double, double)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL5TxTCBPvj
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL5TxTCBPvj
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart7(unsigned char*, unsigned short, double, double)
@@ -9492,12 +9494,13 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
-<P><STRONG><a name="[c2]"></a>_ZL14_OpenMV_ServerPv</STRONG> (Thumb, 868 bytes, Stack size 32 bytes, drv_openmv.o(.text._ZL14_OpenMV_ServerPv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = _ZL14_OpenMV_ServerPv &rArr; xQueueCreateMutex &rArr; xQueueGenericSend &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+<P><STRONG><a name="[c2]"></a>_ZL14_OpenMV_ServerPv</STRONG> (Thumb, 940 bytes, Stack size 32 bytes, drv_openmv.o(.text._ZL14_OpenMV_ServerPv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = _ZL14_OpenMV_ServerPv &rArr; Read_Uart3(unsigned char*, unsigned short, double, double) &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Read_Uart3(unsigned char*, unsigned short, double, double)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> drv_openmv.o(.text._Z15init_drv_OpenMVv)
 </UL>

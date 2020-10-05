@@ -13,15 +13,14 @@ _OpenMV OpenMV;
 static void _OpenMV_Server(void *pvParameters)
 {
     /*状态机*/
-    
+
     unsigned char rc_counter = 0;
     unsigned char x_counter = 0;
     unsigned char y_counter = 0;
     unsigned char x_enter = 0;
     unsigned char y_enter = 0;
-    unsigned char buf_x[10];// = "-122.522";
-    unsigned char buf_y[10];// = "111.251";
-    unsigned char buffer[20] = "AAX122.24Y-232.54EE";
+    unsigned char buf_x[10];
+    unsigned char buf_y[10]; 
     unsigned char nagtiveFlag = 0;
     unsigned char digCount = 0;
     unsigned char decimal = 0;
@@ -35,11 +34,8 @@ static void _OpenMV_Server(void *pvParameters)
     while (1)
     {
         uint8_t rdata;
-        // if (Read_Uart3(&rdata, 1, 2, 0.5))
-        // {
-        rdata = buffer[j];
-        j = j + 1;
-        j = j % 19;
+        if (Read_Uart3(&rdata, 1, 2, 0.5))
+        {
             if (rc_counter < 2)
             {
                 //接收包头
@@ -76,13 +72,13 @@ static void _OpenMV_Server(void *pvParameters)
                         }
                         else if (buf_x[i] >= '0' && buf_x[i] <= '9' && decimal == 0)
                         {
-                            num = num * 10 + (buf_x[i]-'0');
+                            num = num * 10 + (buf_x[i] - '0');
                             ++digCount;
                         }
                         else if (buf_x[i] >= '0' && buf_x[i] <= '9' && decimal == 1)
                         {
-                            a = a*0.1;
-                            num = num + (buf_x[i]-'0')*a;
+                            a = a * 0.1;
+                            num = num + (buf_x[i] - '0') * a;
                             ++digCount;
                         }
                         if (buf_x[i] == '.')
@@ -91,29 +87,28 @@ static void _OpenMV_Server(void *pvParameters)
                             a = 1;
                         }
                     }
-              
-                        if (nagtiveFlag)
+
+                    if (nagtiveFlag)
+                    {
+                        if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
                         {
-                            if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
-                            {
-                                OpenMV.dev_x = -num;
-                                xSemaphoreGive(openMVMutex);
-                            }
+                            OpenMV.dev_x = -num;
+                            xSemaphoreGive(openMVMutex);
                         }
-                        else
+                    }
+                    else
+                    {
+                        if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
                         {
-                            if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
-                            {
-                                OpenMV.dev_x = num;
-                                xSemaphoreGive(openMVMutex);
-                            }
+                            OpenMV.dev_x = num;
+                            xSemaphoreGive(openMVMutex);
                         }
-                        a = 1;
-                        num = 0;
-                        digCount = 0;
-                        decimal = 0;
-                        nagtiveFlag = 0;
-                
+                    }
+                    a = 1;
+                    num = 0;
+                    digCount = 0;
+                    decimal = 0;
+                    nagtiveFlag = 0;
                 }
 
                 if (y_counter != 0)
@@ -126,13 +121,13 @@ static void _OpenMV_Server(void *pvParameters)
                         }
                         else if (buf_y[i] >= '0' && buf_y[i] <= '9' && decimal == 0)
                         {
-                            num = num * 10 + (buf_y[i]-'0');
+                            num = num * 10 + (buf_y[i] - '0');
                             ++digCount;
                         }
                         else if (buf_y[i] >= '0' && buf_y[i] <= '9' && decimal == 1)
                         {
                             a = a * 0.1;
-                            num = num + (buf_y[i]-'0')*a;
+                            num = num + (buf_y[i] - '0') * a;
                             ++digCount;
                         }
                         if (buf_y[i] == '.')
@@ -141,27 +136,27 @@ static void _OpenMV_Server(void *pvParameters)
                             a = 1;
                         }
                     }
-                        if (nagtiveFlag)
+                    if (nagtiveFlag)
+                    {
+                        if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
                         {
-                            if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
-                            {
-                                OpenMV.dev_y = -num;
-                                xSemaphoreGive(openMVMutex);
-                            }
+                            OpenMV.dev_y = -num;
+                            xSemaphoreGive(openMVMutex);
                         }
-                        else
+                    }
+                    else
+                    {
+                        if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
                         {
-                            if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
-                            {
-                                OpenMV.dev_y = num;
-                                xSemaphoreGive(openMVMutex);
-                            }
+                            OpenMV.dev_y = num;
+                            xSemaphoreGive(openMVMutex);
                         }
-                        a = 1;
-                        num = 0;
-                        digCount = 0;
-                        decimal = 0;
-                        nagtiveFlag = 0;
+                    }
+                    a = 1;
+                    num = 0;
+                    digCount = 0;
+                    decimal = 0;
+                    nagtiveFlag = 0;
                 }
             }
             if (x_enter)
@@ -186,12 +181,9 @@ static void _OpenMV_Server(void *pvParameters)
                 y_enter = 1;
                 y_counter = 0;
             }
-            
         }
-      
     }
-
-
+}
 void init_drv_OpenMV()
 {
     //波特率115200
