@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ACFly.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ACFly.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Tue Oct  6 04:02:04 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Oct  7 02:18:29 2020
 <BR><P>
 <H3>Maximum Stack Usage =       4152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1196,6 +1196,7 @@ Global Symbols
 <LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_Enable(double)
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M13_MagCalib::main_func(void*, unsigned)
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M32_PosCtrl::main_func(void*, unsigned)
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL12MSafe_ServerPv
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AuxCamTakePhoto()
 <LI><a href="#[30b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRA_LatLon(double, double, double, double, double)
@@ -2549,7 +2550,6 @@ Global Symbols
 <LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Enable(double)
 <LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Altitude_Control_Enable(double)
 <LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_WindDisturbance(vector3&lang;double&rang;*, double)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHomeLatLon(vector2&lang;double&rang;*, double)
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHomePoint(vector2&lang;double&rang;*, double)
 <LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_XYZAutoSpeed(double, double)
@@ -2560,6 +2560,7 @@ Global Symbols
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_get_ZAutoSpeed(double*, double*, double)
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelative(double, double, double, double, double)
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelative(double, double, double, double)
+<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[303]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZ(double, double, double, double, double)
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXY(double, double, double, double)
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_set_Target_Yaw(double, double)
@@ -3290,6 +3291,7 @@ Global Symbols
 
 <P><STRONG><a name="[31e]"></a>Process_NavCmd(unsigned short, double, unsigned char, double*, NavCmdInf*)</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, navcmdprocess.o(.text._Z14Process_NavCmdtdhPdP9NavCmdInf))
 <BR><BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M32_PosCtrl::main_func(void*, unsigned)
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL12MSafe_ServerPv
 </UL>
 
@@ -3617,8 +3619,8 @@ Global Symbols
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M30_AttCtrl::main_func(void*, unsigned)
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M32_PosCtrl::main_func(void*, unsigned)
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL12MSafe_ServerPv
+<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL25NavCmd20_RETURN_TO_LAUNCHdhPdP9NavCmdInf
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL17NavCmd16_WAYPOINTdhPdP9NavCmdInf
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL13NavCmd21_LANDdhPdP9NavCmdInf
@@ -3971,9 +3973,9 @@ Global Symbols
 <LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_AuxFuncs(const Receiver*)
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M32_PosCtrl::main_func(void*, unsigned)
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
-<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AuxCamTakePhoto()
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelativeBodyheading(double, double, double, double, double)
+<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL17NavCmd16_WAYPOINTdhPdP9NavCmdInf
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL16NavCmd22_TAKEOFFdhPdP9NavCmdInf
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL13NavCmd21_LANDdhPdP9NavCmdInf
@@ -5372,8 +5374,7 @@ Global Symbols
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockCtrl(double)
 <LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UnlockCtrl()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
-<LI><a href="#[301]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightGlobal(double, double)
+<BR>[Called By]<UL><LI><a href="#[301]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightGlobal(double, double)
 <LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_Height(double, double)
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL16NavCmd22_TAKEOFFdhPdP9NavCmdInf
 </UL>
@@ -5467,8 +5468,7 @@ Global Symbols
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelative(double, double, double, double)
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL16NavCmd22_TAKEOFFdhPdP9NavCmdInf
+<BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL16NavCmd22_TAKEOFFdhPdP9NavCmdInf
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL13NavCmd21_LANDdhPdP9NavCmdInf
 </UL>
 
@@ -5542,7 +5542,6 @@ Global Symbols
 <LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Enable(double)
 <LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Altitude_Control_Enable(double)
 <LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_WindDisturbance(vector3&lang;double&rang;*, double)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHomeLatLon(vector2&lang;double&rang;*, double)
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getHomePoint(vector2&lang;double&rang;*, double)
 <LI><a href="#[2fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_XYZAutoSpeed(double, double)
@@ -5553,6 +5552,7 @@ Global Symbols
 <LI><a href="#[2f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_get_ZAutoSpeed(double*, double*, double)
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelative(double, double, double, double, double)
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelative(double, double, double, double)
+<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[303]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZ(double, double, double, double, double)
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXY(double, double, double, double)
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_set_Target_Yaw(double, double)
@@ -5974,10 +5974,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctrl_Attitude()
 </UL>
 
-<P><STRONG><a name="[102]"></a>M35_Auto1::main_func(void*, unsigned)</STRONG> (Thumb, 2420 bytes, Stack size 376 bytes, m35_auto1.o(.text._ZN9M35_Auto19main_funcEPvj))
-<BR><BR>[Stack]<UL><LI>Max Depth = 1040<LI>Call Chain = M35_Auto1::main_func(void*, unsigned) &rArr; Position_Control_Enable(double) &rArr; Altitude_Control_Enable(double) &rArr; Attitude_Control_Enable(double) &rArr; get_Airframe_quat(Quaternion*, double) &rArr; ReadParamGroup(SName, unsigned long long*, bool*, double) &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+<P><STRONG><a name="[102]"></a>M35_Auto1::main_func(void*, unsigned)</STRONG> (Thumb, 2464 bytes, Stack size 568 bytes, m35_auto1.o(.text._ZN9M35_Auto19main_funcEPvj))
+<BR><BR>[Stack]<UL><LI>Max Depth = 1232<LI>Call Chain = M35_Auto1::main_func(void*, unsigned) &rArr; Position_Control_Enable(double) &rArr; Altitude_Control_Enable(double) &rArr; Attitude_Control_Enable(double) &rArr; get_Airframe_quat(Quaternion*, double) &rArr; ReadParamGroup(SName, unsigned long long*, bool*, double) &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
+<LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueGenericSend
 <LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_is_inFlight(bool*, double)
 <LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReceiver(Receiver*, SName*, double)
 <LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setLedMode(LEDMode)
@@ -6003,12 +6005,13 @@ Global Symbols
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_MSStatus()
 <LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_WindDisturbance(vector3&lang;double&rang;*, double)
 <LI><a href="#[34a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_maxVelDown()
+<LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_NavCmd(unsigned short, double, unsigned char, double*, NavCmdInf*)
 <LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_maxVelXY()
 <LI><a href="#[349]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_maxVelUp()
 <LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_maxAccXY()
-<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
+<LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_nan
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
+<LI><a href="#[1e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr8
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> m35_auto1.o(.rodata._ZTV9M35_Auto1)
 </UL>
@@ -7473,9 +7476,9 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 5]<UL><LI> gui.o(.text.DMA2D_IRQHandler)
 <LI> drv_flash.o(.text.QUADSPI_IRQHandler)
-<LI> drv_oled.o(.text.SPI4_IRQHandler)
 <LI> drv_extiic.o(.text.I2C1_EV_IRQHandler)
 <LI> drv_extiic.o(.text.I2C1_ER_IRQHandler)
+<LI> drv_oled.o(.text.SPI4_IRQHandler)
 </UL>
 <P><STRONG><a name="[3e2]"></a>vListInitialise</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, list.o(.text.vListInitialise))
 <BR><BR>[Called By]<UL><LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueCreateMutex
@@ -8099,6 +8102,7 @@ Global Symbols
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Attitude_GyroIntegral(unsigned char, IMU_Sensor)
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Position(unsigned char, IMU_Sensor)
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Attitude(unsigned char, IMU_Sensor)
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
 <LI><a href="#[377]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_queue_send
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_mutex_unlock
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XYZ(PosSensorHealthInf3*, double)
@@ -8286,6 +8290,7 @@ Global Symbols
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Attitude_GyroIntegral(unsigned char, IMU_Sensor)
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Position(unsigned char, IMU_Sensor)
 <LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Attitude(unsigned char, IMU_Sensor)
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
 <LI><a href="#[3c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osal_semaphore_wait
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_OptimalGlobal_XYZ(PosSensorHealthInf3*, double)
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_Ctrl(vector3&lang;double&rang;*, double)
@@ -8529,9 +8534,9 @@ Global Symbols
 <LI><a href="#[2db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Disable(double)
 <LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Enable(double)
 <LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Altitude_Control_Enable(double)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelative(double, double, double, double, double)
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelative(double, double, double, double)
+<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[303]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZ(double, double, double, double, double)
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXY(double, double, double, double)
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_set_Target_Yaw(double, double)
@@ -8778,13 +8783,13 @@ Global Symbols
 <P><STRONG><a name="[160]"></a>__ARM_fpclassify</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, fpclassify.o(i.__ARM_fpclassify))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_fpclassify
 </UL>
-<BR>[Called By]<UL><LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
-<LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_exp
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[42e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_tan
+<LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 </UL>
 
 <P><STRONG><a name="[425]"></a>__ARM_fpclassifyf</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fpclassifyf.o(i.__ARM_fpclassifyf))
@@ -8794,11 +8799,11 @@ Global Symbols
 <P><STRONG><a name="[244]"></a>__hardfp_acos</STRONG> (Thumb, 422 bytes, Stack size 72 bytes, acos.o(i.__hardfp_acos))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = __hardfp_acos &rArr; sqrt &rArr; __set_errno
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<BR>[Calls]<UL><LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
 <LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[41f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctrl_Attitude()
 </UL>
@@ -8806,14 +8811,14 @@ Global Symbols
 <P><STRONG><a name="[20e]"></a>__hardfp_asin</STRONG> (Thumb, 432 bytes, Stack size 72 bytes, asin.o(i.__hardfp_asin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = __hardfp_asin &rArr; sqrt &rArr; __set_errno
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
 <LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[41f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL10GUI_ServerPv
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL14Msg30_ATTITUDEhP17__mavlink_message
@@ -8825,11 +8830,11 @@ Global Symbols
 <P><STRONG><a name="[422]"></a>__hardfp_atan</STRONG> (Thumb, 402 bytes, Stack size 40 bytes, atan.o(i.__hardfp_atan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __hardfp_atan &rArr; __ARM_fpclassify
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[424]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atan
 </UL>
@@ -8851,9 +8856,9 @@ Global Symbols
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M32_PosCtrl::main_func(void*, unsigned)
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetVelocityBodyHeadingXY_AngleLimit(double, double, double, double, double)
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
-<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
 <LI><a href="#[288]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AuxCamTakePhoto()
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelativeBodyheading(double, double, double, double, double)
+<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
 <LI><a href="#[2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Attitude_Control_set_Target_Yaw(double, double)
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL25NavCmd20_RETURN_TO_LAUNCHdhPdP9NavCmdInf
 <LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL17NavCmd16_WAYPOINTdhPdP9NavCmdInf
@@ -8867,10 +8872,10 @@ Global Symbols
 <P><STRONG><a name="[324]"></a>__hardfp_atan2f</STRONG> (Thumb, 594 bytes, Stack size 32 bytes, atan2f.o(i.__hardfp_atan2f))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __hardfp_atan2f &rArr; __set_errno
 </UL>
-<BR>[Calls]<UL><LI><a href="#[426]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_underflow
-<LI><a href="#[427]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_infnan2
+<BR>[Calls]<UL><LI><a href="#[427]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_infnan2
 <LI><a href="#[425]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassifyf
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[426]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_underflow
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL13Msg74_VFR_HUDhP17__mavlink_message
 </UL>
@@ -8878,11 +8883,11 @@ Global Symbols
 <P><STRONG><a name="[28c]"></a>__hardfp_cos</STRONG> (Thumb, 158 bytes, Stack size 32 bytes, cos.o(i.__hardfp_cos))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = __hardfp_cos &rArr; __ieee754_rem_pio2 &rArr; fabs
 </UL>
-<BR>[Calls]<UL><LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
-<LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
-<LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<BR>[Calls]<UL><LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
 <LI><a href="#[42a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
+<LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 </UL>
 <BR>[Called By]<UL><LI><a href="#[300]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PositionSensorUpdatePositionGlobalVel(unsigned char, vector3&lang;double&rang;, vector3&lang;double&rang;, bool, double, double, double, double)
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL25Msg33_GLOBAL_POSITION_INThP17__mavlink_message
@@ -8903,12 +8908,12 @@ Global Symbols
 <P><STRONG><a name="[245]"></a>__hardfp_exp</STRONG> (Thumb, 486 bytes, Stack size 56 bytes, exp.o(i.__hardfp_exp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __hardfp_exp &rArr; __ARM_fpclassify
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[42b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_overflow
 <LI><a href="#[41c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_infnan
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctrl_Position()
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ctrl_Attitude()
@@ -8917,14 +8922,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[31f]"></a>__hardfp_nan</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, nan.o(i.__hardfp_nan))
-<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL12MSafe_ServerPv
+<BR><BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;M35_Auto1::main_func(void*, unsigned)
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL12MSafe_ServerPv
 </UL>
 
 <P><STRONG><a name="[2ab]"></a>__hardfp_pow</STRONG> (Thumb, 2108 bytes, Stack size 192 bytes, pow.o(i.__hardfp_pow))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = __hardfp_pow &rArr; sqrt &rArr; __set_errno
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
 <LI><a href="#[42b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_overflow
@@ -8934,6 +8939,7 @@ Global Symbols
 <LI><a href="#[42d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[41f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sqrt
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_LedBrightness(float, float, float)
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ZL8SPL06TCBPvj
@@ -8985,10 +8991,10 @@ Global Symbols
 <P><STRONG><a name="[208]"></a>__hardfp_tan</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, tan.o(i.__hardfp_tan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = __hardfp_tan &rArr; __ieee754_rem_pio2 &rArr; fabs
 </UL>
-<BR>[Calls]<UL><LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
-<LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
+<BR>[Calls]<UL><LI><a href="#[41d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_invalid
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
 <LI><a href="#[42e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_tan
+<LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 </UL>
 <BR>[Called By]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Attitude_GyroIntegral(unsigned char, IMU_Sensor)
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MS_Position(unsigned char, IMU_Sensor)
@@ -9016,22 +9022,22 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[41e]"></a>__kernel_poly</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, poly.o(i.__kernel_poly))
-<BR><BR>[Called By]<UL><LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
-<LI><a href="#[42a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
+<BR><BR>[Called By]<UL><LI><a href="#[42a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_exp
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_acos
 <LI><a href="#[42e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_tan
+<LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 </UL>
 
 <P><STRONG><a name="[429]"></a>__kernel_sin</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, sin_i.o(i.__kernel_sin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = __kernel_sin &rArr; __ARM_fpclassify
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[28c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_cos
 </UL>
@@ -9039,10 +9045,10 @@ Global Symbols
 <P><STRONG><a name="[42e]"></a>__kernel_tan</STRONG> (Thumb, 434 bytes, Stack size 96 bytes, tan_i.o(i.__kernel_tan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = __kernel_tan &rArr; __ARM_fpclassify
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[421]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fabs
 <LI><a href="#[420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[41e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_tan
 </UL>
@@ -9077,12 +9083,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[420]"></a>__mathlib_dbl_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dunder.o(i.__mathlib_dbl_underflow))
-<BR><BR>[Called By]<UL><LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
-<LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR><BR>[Called By]<UL><LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_exp
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[42e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_tan
+<LI><a href="#[429]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
 </UL>
 
 <P><STRONG><a name="[427]"></a>__mathlib_flt_infnan2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_infnan2))
@@ -9108,12 +9114,12 @@ Global Symbols
 <P><STRONG><a name="[421]"></a>fabs</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, fabs.o(i.fabs))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fabs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
-<LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
+<BR>[Called By]<UL><LI><a href="#[422]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan
 <LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_pow
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_atan2
 <LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_asin
 <LI><a href="#[42e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_tan
+<LI><a href="#[428]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ieee754_rem_pio2
 </UL>
 
 <P><STRONG><a name="[41f]"></a>sqrt</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, sqrt.o(i.sqrt))
@@ -9276,8 +9282,8 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> gui.o(.init_array)
 </UL>
-<P><STRONG><a name="[c8]"></a>_ZL10GUI_ServerPv</STRONG> (Thumb, 3216 bytes, Stack size 744 bytes, gui.o(.text._ZL10GUI_ServerPv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 1088 + Unknown Stack Size
+<P><STRONG><a name="[c8]"></a>_ZL10GUI_ServerPv</STRONG> (Thumb, 3292 bytes, Stack size 736 bytes, gui.o(.text._ZL10GUI_ServerPv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 1080 + Unknown Stack Size
 <LI>Call Chain = _ZL10GUI_ServerPv &rArr; get_AirframeY_quat(Quaternion*, double) &rArr; ReadParamGroup(SName, unsigned long long*, bool*, double) &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
@@ -9494,7 +9500,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[406]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xPortStartScheduler
 </UL>
 
-<P><STRONG><a name="[c2]"></a>_ZL14_OpenMV_ServerPv</STRONG> (Thumb, 940 bytes, Stack size 32 bytes, drv_openmv.o(.text._ZL14_OpenMV_ServerPv))
+<P><STRONG><a name="[c2]"></a>_ZL14_OpenMV_ServerPv</STRONG> (Thumb, 938 bytes, Stack size 32 bytes, drv_openmv.o(.text._ZL14_OpenMV_ServerPv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = _ZL14_OpenMV_ServerPv &rArr; Read_Uart3(unsigned char*, unsigned short, double, double) &rArr; xQueueSemaphoreTake &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xQueueSemaphoreTake
@@ -10719,11 +10725,11 @@ Local Symbols
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_ControlMode(Position_ControlMode*, double)
 <LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Altitude_ControlMode(Position_ControlMode*, double)
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_Position_MSStatus()
-<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
-<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYZRelativeBodyheading(double, double, double, double, double)
+<LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelativeBodyheading(double, double, double, double)
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXYRelative(double, double, double, double)
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXY_LatLon(double, double, double, double)
+<LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightRelative(double, double)
 <LI><a href="#[302]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_set_TargetPositionXY(double, double, double, double)
 <LI><a href="#[301]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_HeightGlobal(double, double)
 <LI><a href="#[2f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Position_Control_Takeoff_Height(double, double)

@@ -10,6 +10,8 @@
 static const unsigned char packet_ID[4] = {'A', 'A', 'E', 'E'};
 SemaphoreHandle_t openMVMutex;
 _OpenMV OpenMV;
+int openmvflag = 0;
+
 static void _OpenMV_Server(void *pvParameters)
 {
     /*状态机*/
@@ -182,6 +184,16 @@ static void _OpenMV_Server(void *pvParameters)
                 y_counter = 0;
             }
         }
+        else
+        {
+             if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
+            {
+                OpenMV.dev_y = 0;
+                OpenMV.dev_x = 0;
+                xSemaphoreGive(openMVMutex);
+            }
+        }
+        
     }
 }
 void init_drv_OpenMV()

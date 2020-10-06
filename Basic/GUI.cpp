@@ -18,6 +18,7 @@
 
 extern SemaphoreHandle_t openMVMutex;
 extern _OpenMV OpenMV;
+extern int openmvflag;
 
 //超时时间
 #define TIMEOUT 2.0 * configTICK_RATE_HZ
@@ -382,10 +383,23 @@ static void GUI_Server(void *pvParameters)
 		/*接收机状态*/
 		//清空数据区
 		ImageFill(
-			(void *)&ImgBuffer[160 * 240 + 86], ImgFormat_RGB565, 240 - 1 * 8,
+			(void *)&ImgBuffer[160 * 240 + 86], ImgFormat_RGB565, 240 - 8 * 30,
 			MAGENTA,
-			1 * 16, 1 * 8);
+			2 * 16, 8 * 30);
 
+		if (xSemaphoreTake(openMVMutex, portMAX_DELAY))
+        {
+			if(openmvflag)
+			{
+				DrawFont16x8("YES", 160, 110, BLUE);
+			}
+			else
+			{
+				DrawFont16x8("NO", 160, 110, BLUE);
+			}
+			
+			xSemaphoreGive(openMVMutex);
+        }
 		Receiver rc;
 		getReceiver(&rc);
 		if (rc.connected)

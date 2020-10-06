@@ -217,4 +217,5 @@
   Communication\Mavlink\common_ACFly\..\mavlink_get_info.h \
   Communication\Mavlink\px4_custom_mode.h FreeRTOS\include\semphr.h \
   FreeRTOS\include\queue.h Basic\Basic.hpp Communication\Commulink.hpp \
-  ControlSystem\ControlSystem.hpp Modes\NavCmdProcess.hpp
+  ControlSystem\ControlSystem.hpp Modes\NavCmdProcess.hpp \
+  Drivers\drv_OpenMV.hpp

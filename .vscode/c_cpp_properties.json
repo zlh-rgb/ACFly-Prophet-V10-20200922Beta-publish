@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/FreeRTOS",
+                "${workspaceFolder}/FreeRTOS/portable/RVDS/ARM_CM7/r0p1"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_HAL_DRIVER","STM32H743xx","ARM_MATH_CM7","__FPU_PRESENT=1","DCACHE_SIZE=32","__STATIC_INLINE=static"
+            ],
+            "windowsSdkVersion": "10.0.18362.0",
+            "compilerPath": "E:/VS2017/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}
